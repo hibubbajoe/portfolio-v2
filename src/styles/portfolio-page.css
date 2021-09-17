@@ -1,0 +1,123 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --puke: #c6e421;
+    --frank: #ff7e30;
+    --offwhite: #f5f5f5;
+    --beigebrown: rgb(151, 124, 124);
+    --pinkypink: rgb(206, 157, 157);
+}
+
+.portfolio-page {
+    padding: 40px 30px;
+    color: var(--black);
+    background-color: var(--puke);
+    height: 100vh;
+    width: auto;
+}
+
+.portfolio-container {
+    position: absolute;
+    top: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .portfolio-display {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+} */
+
+.portfolio__item-link {
+    position: relative;
+    color: var(--black);
+    font-size: 4rem;
+    padding-left: 50px;
+    letter-spacing: -2px;
+    font-weight: 300 !important;
+    /* width: 60rem; */
+    /* cursor: pointer; */
+    opacity: 1;
+    animation: 1s slide-in;
+}
+
+@keyframes slide-in {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#portfolio-link-btn {
+    color: var(--black) !important;
+}
+
+#portfolio-link-btn:hover {
+    color: var(--offwhite) !important;
+}
+
+.portfolio__item-link:hover {
+    transition-duration: 0.1s;
+    opacity: 0;
+}
+
+.portfolio__item-img {
+    pointer-events: none;
+    position: absolute;
+    max-height: 600px;
+    width: auto;
+    opacity: 0;
+    left: 70%;
+    top: -90%;
+    transform: scale(0);
+}
+
+.portfolio__item-link:hover+.portfolio__item-img {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.4s;
+}
+
+.marquee {
+    position: absolute;
+    top: -100%;
+    z-index: 1;
+    overflow: hidden;
+    color: var(--pinkypink);
+    pointer-events: none;
+}
+
+.marquee__inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    opacity: 0;
+}
+
+.portfolio__item-link:hover~.marquee .marquee__inner {
+    opacity: 1;
+    animation: 15s slide;
+}
+
+.marquee span {
+    white-space: nowrap;
+    font-size: 7vw;
+    font-style: italic;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(-1000px);
+    }
+}
