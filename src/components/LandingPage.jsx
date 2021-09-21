@@ -7,7 +7,7 @@ const LandingPage = () => {
         <div>
             <RevealerNav />
             <div class="landing-page">
-                <h1>Roobinn <br /> ***<br />Hhedluundd</h1>
+                <h1>Robin <br />Hedlund</h1>
             </div>
         </div>
     )

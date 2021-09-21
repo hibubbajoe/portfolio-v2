@@ -3,8 +3,11 @@ import { useLocation } from "react-router-dom";
 
 const RevealerNav = () => {
     const [actionBtn, setActionBtn] = useState("")
+    // const [headerBtn, setActionBtn] = useState("")
     const [revealerNav, setRevealerNav] = useState(() => { })
     let lastVisitedPage = useLocation().pathname;
+
+
 
     useEffect(() => {
         setActionBtn(document.querySelector(".nav-btn-js"));
@@ -20,6 +23,7 @@ const RevealerNav = () => {
         if (!revealerNav.isRevealed()) {
             revealerNav.reveal();
             actionBtn.setAttribute("data-open", true);
+            actionBtn.setAttribute("page", lastVisitedPage);
         } else {
             revealerNav.hide();
             actionBtn.setAttribute("data-open", false)
@@ -29,7 +33,10 @@ const RevealerNav = () => {
     return (
         <header>
             <div>
-                <button className="header__button nav-btn-js" onClick={handleClick} type="button"></button>
+
+                <button className={`header__button nav-btn-js`}
+                    onClick={handleClick} type="button"></button>
+
                 <nav className="header__nav nav-js" data-active="true">
                     <ul className="header__menu">
                         <li className="header__menu-item">

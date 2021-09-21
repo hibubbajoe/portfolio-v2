@@ -5,6 +5,7 @@
     --frank: #ff7e30;
     --offwhite: #f5f5f5;
     --pinkypink: rgb(206, 157, 157);
+    --brownish: rgb(77, 67, 67);
 }
 
 
@@ -12,6 +13,26 @@ header {
     position: relative;
     display: flex;
     justify-content: space-between;
+}
+
+.header__button[page="/portfolio"][data-open="true"] {
+    background-color: var(--puke);
+    animation-name: scale;
+}
+
+.header__button[page="/"][data-open="true"] {
+    background-color: var(--black);
+    animation-name: scale;
+}
+
+.header__button[page="/contact"][data-open="true"] {
+    background-color: var(--brownish);
+    animation-name: scale;
+}
+
+.header__button[page="/about"][data-open="true"] {
+    background-color: var(--offwhite);
+    animation-name: scale;
 }
 
 .header__button {
@@ -31,20 +52,32 @@ header {
 }
 
 .header__button[data-open="true"] {
-    background-color: #000;
-    animation-name: scale;
+    /* background-color: #000; */
+    /* animation-name: scale; */
 }
 
 .header__button[data-open="false"] {
+    -webkit-transition: background-color 50ms linear;
+    -moz-transition: background-color 50ms linear;
+    -o-transition: background-color 50ms linear;
     transition: background-color 50ms linear;
 }
 
-@keyframes scale {
+@-webkit-keyframes scale {
+
     from {
+        /* -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0); */
         transform: scale(0);
     }
 
     to {
+        /* -webkit-transform: scale(100%);
+        -moz-transform: scale(100%);
+        -ms-transform: scale(100%);
+        -o-transform: scale(100%); */
         transform: scale(100%);
     }
 }

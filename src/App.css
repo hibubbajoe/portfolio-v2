@@ -7,8 +7,9 @@
 }
 
 @font-face {
-  font-family: StretchPro;
-  src: url('./fonts/StretchPro.ttf');
+  font-family: akira;
+  src: url('./fonts/akira-thicc.ttf');
+  /* src: url('./fonts/StretchPro.ttf'); */
 }
 
 body {
@@ -16,7 +17,7 @@ body {
   height: 100vh;
   color: var(--offwhite);
   background-color: var(--black);
-  font-family: StretchPro;
+  font-family: akira;
   overflow: hidden;
 }
 
