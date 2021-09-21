@@ -32,7 +32,7 @@ const PortfolioPage = () => {
                         <img class="portfolio__item-img" src={process.env.PUBLIC_URL + "/images/web-store-api.png"} alt="screenshot of web store API" />
                         <div class="marquee">
                             <div class="marquee__inner">
-                                <span>WEB STORE - WEB STORE - WEB STORE - WEB STORE - WEB STORE - WEB STORE - WEB STORE - </span>
+                                <span>WEB STORE API - WEB STORE API - WEB STORE API - WEB STORE API - WEB STORE API - WEB STORE API - WEB STORE API - </span>
                             </div>
                         </div>
                     </div>

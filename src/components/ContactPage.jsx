@@ -6,10 +6,12 @@ const ContactPage = () => {
     const phoneNumber = document
 
     const emailHoover = (e) => {
+        e.preventDefault();
         e.target.innerText = e.type === "mouseenter" ? "ROBIN.HEDLUND@LIVE.SE" : "EMAIL";
     }
 
     const phoneNumberHoover = (e) => {
+        e.preventDefault();
         e.target.innerText = e.type === "mouseenter" ? "076-240 81 85" : "PHONE NUMBER";
     }
 

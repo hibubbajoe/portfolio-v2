@@ -28,6 +28,5 @@ ul {
 a {
   text-decoration: none;
   color: var(--black);
-  letter-spacing: -1px;
   text-transform: uppercase;
 }
